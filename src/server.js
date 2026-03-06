@@ -1,9 +1,9 @@
 import express from 'express';
-import usuariosRouter from './routes/eventos.routes.js';
+import router from '../src/routes/eventos.router.js';
 
 const app = express();
 app.use(express.json());
-app.use('/eventos',usuariosRouter);
+app.use('/eventos',router);
 
 const PORTA =   process.env.PORTA || 3000;
 app.listen(PORTA);

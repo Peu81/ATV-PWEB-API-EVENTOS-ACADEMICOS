@@ -1,9 +1,10 @@
 import {EventosDatabase} from "../Database/EventosDatabase.js";
 
-
-export function listarEventos() {
+const database = new EventosDatabase();
+export function listar() {
     try {
-        const listagem = EventosDatabase.listarTodos()
+        const listagem = database.listarTodos();
+        return listagem;
     } catch (error) {
         console.error("Erro ao encontrar eventos: ", error)
     }
